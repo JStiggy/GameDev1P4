@@ -41,6 +41,7 @@ GameObject:
   - 23: {fileID: 23000011630603768}
   - 114: {fileID: 114000011761216016}
   - 54: {fileID: 54000012809036586}
+  - 95: {fileID: 95000014208203512}
   m_Layer: 0
   m_Name: tmpPlayer
   m_TagString: Untagged
@@ -291,6 +292,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!95 &95000014208203512
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010882895144}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d7c42c7da4cb7b94996e96a85f3ca8b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &108000013184010002
 Light:
   m_ObjectHideFlags: 1
@@ -345,6 +363,7 @@ MonoBehaviour:
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
   fatigue: 0
   resistance: 1
+  inEvent: 1
 --- !u!135 &135000013336008456
 SphereCollider:
   m_ObjectHideFlags: 1

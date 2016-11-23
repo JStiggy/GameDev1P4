@@ -51,12 +51,21 @@ public class CameraController : MonoBehaviour {
 
     void Update()
     {
-        if(Input.GetAxisRaw("Vertical") > 0)
+        if (Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Horizontal") > 0) 
         {
             orbit.yRotation = Mathf.Lerp(orbit.yRotation, - 180, .1f );
+            orbit.xRotation = Mathf.Lerp(orbit.xRotation, - 20, .1f);
         }
-        orbit.xRotation += -Input.GetAxis("OrbitVertical") * orbit.vOrbitSmooth * Time.deltaTime;
-        orbit.yRotation += -Input.GetAxis("OrbitHorizontal") * orbit.hOrbitSmooth * Time.deltaTime;
+        else
+        {
+            orbit.yRotation += -Input.GetAxis("OrbitHorizontal") * orbit.hOrbitSmooth * Time.deltaTime * Input.GetAxisRaw("Fire1");
+            orbit.xRotation += -Input.GetAxis("OrbitVertical") * orbit.vOrbitSmooth * Time.deltaTime * Input.GetAxisRaw("Fire1");
+        }
+        
+        if(orbit.yRotation > 360 || orbit.yRotation < -360)
+        {
+            orbit.yRotation = orbit.yRotation % 360;
+        }
 
         orbit.xRotation = Mathf.Clamp(orbit.xRotation, orbit.minXRotation, orbit.maxXRotation);
 
