@@ -1,15 +1,28 @@
 fileFormatVersion: 2
-guid: f8ce3077a842f9545803135e48938217
-timeCreated: 1479677581
+guid: 7c310779099230d49a9a872c7f51e1e0
+timeCreated: 1480054332
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cylinder.001
+    100000: Camera
+    100002: Entrance
+    100004: Lamp
+    100006: //RootNode
+    100008: wings
+    400000: Camera
+    400002: Entrance
+    400004: Lamp
+    400006: //RootNode
+    400008: wings
+    2300000: Entrance
+    2300002: wings
+    2300004: //RootNode
+    3300000: Entrance
+    3300002: wings
+    3300004: //RootNode
+    4300000: wings
+    4300002: Entrance
   materials:
     importMaterials: 1
     materialName: 0
