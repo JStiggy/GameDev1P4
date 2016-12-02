@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 7a86d5d2419b304408c1d0038a416341
-timeCreated: 1480713709
+guid: ab7b0f21539f6b3449b2760c285fd14a
+timeCreated: 1480713643
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cave2
+    4300000: Cave
   materials:
     importMaterials: 1
     materialName: 0
