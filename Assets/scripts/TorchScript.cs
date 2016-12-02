@@ -23,7 +23,6 @@ public class TorchScript : MonoBehaviour {
 		phi = Time.time/duration*2*Mathf.PI;
 		amplitude = Mathf.Cos(phi) * 0.5f + 1.5f;
 		light.intensity = amplitude;
-		//if(light.intensity>0)
-		//	light.intensity -=0.01f;
+
 	}
 }
