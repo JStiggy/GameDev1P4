@@ -1006,21 +1006,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 54000012809036586, guid: a667d07ce26b3de49a68aea5d222addd,
-        type: 2}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 54000012809036586, guid: a667d07ce26b3de49a68aea5d222addd,
-        type: 2}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 54000012809036586, guid: a667d07ce26b3de49a68aea5d222addd,
-        type: 2}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 136000012737133996, guid: a667d07ce26b3de49a68aea5d222addd,
         type: 2}
       propertyPath: m_Material
