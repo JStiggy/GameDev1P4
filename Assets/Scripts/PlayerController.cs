@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
         public float velocity = 12f;
         public float rotationVelocity = 150f;
         public float distanceToGround = 1f;
+        public float knockDownForce = 5f;
     }
 
     [System.Serializable]
@@ -21,6 +22,8 @@ public class PlayerController : MonoBehaviour
     public MoveSettings moveSettings = new MoveSettings();
     public PhysSettings physSettings = new PhysSettings();
     private Animator animator;
+
+    public float interactionHeight = 3.0f;
 
     private Vector3 movementVector = Vector3.zero;
     [HideInInspector]
@@ -44,17 +47,22 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetFloat("Speed", movementVector.z);
+        //if (Input.GetButtonDown("Submit"))
+        //{
+        //    knockDown();
+        //}
+
+        animator.SetFloat("Speed", movementVector.z + Mathf.Abs(Input.GetAxisRaw("Horizontal")));
         animator.SetFloat("Resistance", resistance);
         if (Input.GetButtonDown("Submit"))
         {
-            Collider[] col = Physics.OverlapSphere(transform.position + transform.forward, .3f, 1 << 9);
+            Collider[] col = Physics.OverlapSphere(transform.position + transform.forward + transform.up * interactionHeight, .3f, 1 << 9);
             if (col.Length > 0)
             {
                 inEvent = 0;
                 print("mining");
                 inEvent = 0;
-                animator.SetBool("Mining", false);
+                animator.SetBool("Mining", true);
                 StartCoroutine("Mining", col[0].gameObject);
             }
         }
@@ -65,32 +73,47 @@ public class PlayerController : MonoBehaviour
         return Physics.OverlapSphere(transform.position - new Vector3(0, moveSettings.distanceToGround, 0), .5f, 1 << 8).Length > 0 ? true : false;
     }
 
-    public void knockDown()
-    {
-        animator.SetTrigger("Knockdown");
-        inEvent = 0;
-        Invoke("endEvent", 1f);
-    }
-
     IEnumerator Mining(GameObject node)
     {
+        float animTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1;
         //float rotVel = Vector3.Angle((node.transform.position - this.transform.position), this.transform.forward) + targetRotation.eulerAngles.y;
-        while (!(animator.GetCurrentAnimatorStateInfo(0).normalizedTime > .90) || !animator.GetCurrentAnimatorStateInfo(0).IsName("Mine") || !Input.GetButtonDown("Submit"))
+        while (!(animTime > .80f || animTime < .10f) || !animator.GetCurrentAnimatorStateInfo(0).IsName("Mine") || !Input.GetButtonDown("Submit"))
         {
-           // if (Mathf.Abs(targetRotation.eulerAngles.y - rotVel) > 10)
-           // {
-           //     targetRotation *= Quaternion.AngleAxis(Mathf.Lerp(targetRotation.eulerAngles.y, rotVel, .3f) * Time.deltaTime, Vector3.up);
-           // }
+            animTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1;
+            // if (Mathf.Abs(targetRotation.eulerAngles.y - rotVel) > 10)
+            // {
+            //     targetRotation *= Quaternion.AngleAxis(Mathf.Lerp(targetRotation.eulerAngles.y, rotVel, .3f) * Time.deltaTime, Vector3.up);
+            // }
 
             yield return null;
         }
-        Invoke("endEvent", animator.GetCurrentAnimatorStateInfo(0).length * (1 - animator.GetCurrentAnimatorStateInfo(0).normalizedTime));
+        while(animTime < .30f || animTime > .50f)
+        {
+            animTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1;
+            yield return null;
+        }
+        endEvent();
         animator.SetBool("Mining", false);
+        node.GetComponent<MineralNode>().consumeNode();
+        yield return null;
+    }
+
+    IEnumerator KnockBack(Vector3 force)
+    {
+        animator.SetTrigger("Knocked Down");
+        inEvent = 0;
+        for (int i = 0; i < 30;++i)
+        {
+            transform.Translate(force * Time.deltaTime * moveSettings.knockDownForce);
+            yield return null;
+        }
+        endEvent();
         yield return null;
     }
 
     public void endEvent()
     {
+        print("Can Move");
         inEvent = 1;
     }
 
@@ -98,7 +121,7 @@ public class PlayerController : MonoBehaviour
     {
         targetRotation *= Quaternion.AngleAxis(moveSettings.rotationVelocity * Input.GetAxis("Horizontal") * inEvent * Time.deltaTime, Vector3.up);
         transform.rotation = targetRotation;
-        movementVector.z = Input.GetAxis("Vertical") * moveSettings.velocity * inEvent * Mathf.Clamp(1 - fatigue, .5f, 1f);
+        movementVector.z = Mathf.Max(Input.GetAxis("Vertical") * moveSettings.velocity * inEvent * Mathf.Clamp(1 - fatigue, .5f, 1f), 0);
 
         if (Grounded())
         {
@@ -111,4 +134,10 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = transform.TransformDirection(movementVector);
     }
+
+    //void OnDrawGizmos()
+    //{
+    //    Gizmos.DrawSphere(transform.position + transform.forward + transform.up*interactionHeight, .3f);
+    //}
+
 }
