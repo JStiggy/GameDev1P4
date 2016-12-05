@@ -5,6 +5,7 @@ public class SlaveDriver : MonoBehaviour
 {
     private Animator animator;
     private PlayerController player;
+	private CameraController camera;
     private bool canPush = true;
 
     public float sightRange = 10f;
@@ -15,6 +16,7 @@ public class SlaveDriver : MonoBehaviour
     {
         animator = this.GetComponent<Animator>();
         player = GameObject.FindObjectsOfType<PlayerController>()[0];
+		camera = GameObject.FindObjectsOfType<CameraController>()[0];
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class SlaveDriver : MonoBehaviour
         {
             Vector3 f = transform.forward;
             player.StartCoroutine("KnockBack", f);
+			camera.StartCoroutine("distortion");
             StartCoroutine(ResetPush(4f));
         }
         else if (playerDistance < sightRange)

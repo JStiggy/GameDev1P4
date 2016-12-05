@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.ImageEffects;
 
 public class CameraController : MonoBehaviour {
 
@@ -51,6 +52,7 @@ public class CameraController : MonoBehaviour {
 
     void Update()
     {
+		
         if (Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Horizontal") > 0) 
         {
             orbit.yRotation = Mathf.Lerp(orbit.yRotation, - 180, .1f );
@@ -85,4 +87,34 @@ public class CameraController : MonoBehaviour {
         Quaternion targetRot = Quaternion.LookRotation(targetPos - transform.position);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, position.lookSmooth);
     }
+	
+	//coroutine to apply static, and shake the screen around
+	//when the player has been pushed
+	IEnumerator distortion(){
+		
+		Vector3 OGP = transform.position;
+		
+		GetComponent<NoiseAndScratches>().enabled = true;
+		float maxI = 0.5f;
+		while(maxI>0){
+			GetComponent<NoiseAndScratches>().grainIntensityMax = maxI;
+			maxI-=0.01f;
+			
+			//shake camera
+			shake();
+			yield return null;
+		}
+		GetComponent<NoiseAndScratches>().grainIntensityMax = 0;
+		GetComponent<NoiseAndScratches>().enabled = false;
+		
+		transform.position = OGP;
+		yield return null;
+	}
+	
+	void shake(){
+		transform.position = new Vector3(
+			Random.Range(transform.position.x-100, transform.position.x+100), 
+			Random.Range(transform.position.y-100, transform.position.y+100),
+			Random.Range(transform.position.z-100, transform.position.z+100));
+	}
 }
