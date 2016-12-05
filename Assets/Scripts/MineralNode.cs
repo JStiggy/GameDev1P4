@@ -9,6 +9,7 @@ public class MineralNode : MonoBehaviour {
     {
         gameObject.layer = 0;
         this.GetComponent<MeshFilter>().mesh = exhaustedNode;
+		this.GetComponent<Renderer>().material.shader = Shader.Find("Diffuse");
     }
 
 }
