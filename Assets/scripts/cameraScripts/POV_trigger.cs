@@ -5,21 +5,24 @@ using System.Collections;
 //attach to a trigger
 public class POV_trigger : MonoBehaviour {
 	
-	public Camera camera1;
-	public Camera camera2;
+	public Camera activeCamera;
+	public Camera nextCamera;
+	
+	public Collider trigger;
 	
 	
 	void OnTriggerEnter (Collider col){
-		if(col.gameObject.tag == "main"){
-			camera2.enabled = !camera2.enabled;
-			camera1.enabled = !camera1.enabled;
+		if(col== trigger){
+			nextCamera.enabled = !nextCamera.enabled;
+			activeCamera.enabled = !activeCamera.enabled;
 		}
 	}
-	
+	/*
 	void OnTriggerExit (Collider col){
 		if(col.gameObject.tag == "main"){
-			camera2.enabled = !camera2.enabled;
-			camera1.enabled = !camera1.enabled;
+			nextCamera.enabled = !nextCamera.enabled;
+			activeCamera.enabled = !activeCamera.enabled;
 		}
 	}
+	*/
 }

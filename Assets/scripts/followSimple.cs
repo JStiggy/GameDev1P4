@@ -1,28 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class guard : MonoBehaviour {
+public class followSimple : MonoBehaviour {
 
-	Animator anim;
 	public Transform[] location;
 	public float moveSpeed;
 	public bool loop;
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine (do_lol ());
+		StartCoroutine (route ());
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 
-	IEnumerator do_lol(){
+	IEnumerator route(){
+		yield return new WaitForSeconds(3f);
 		do {
 			foreach(Transform t in location){
+				transform.LookAt(t);
 				yield return StartCoroutine(movepos(t));
-				yield return new WaitForSeconds(3f);
+				//yield return new WaitForSeconds(0f);
 			}
 
 		} while(loop);
@@ -34,4 +34,5 @@ public class guard : MonoBehaviour {
 			yield return null; //call me next frame, return here
 		}
 	}
+
 }
