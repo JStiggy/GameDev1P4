@@ -1,5 +1,8 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
 Shader "Outlined/Silhouetted Diffuse" {
 	Properties {
+		_Distance ("Highlight Distance", Float) = 50.0
 		_Color ("Main Color", Color) = (.5,.5,.5,1)
 		_OutlineColor ("Outline Color", Color) = (0,0,0,1)
 		_Outline ("Outline width", Range (0.0, 0.03)) = .005
@@ -21,7 +24,8 @@ struct v2f {
  
 uniform float _Outline;
 uniform float4 _OutlineColor;
- 
+uniform float _Distance;
+
 v2f vert(appdata v) {
 	// just make a copy of incoming vertex data but scaled according to normal direction
 	v2f o;
@@ -31,7 +35,8 @@ v2f vert(appdata v) {
 	float2 offset = TransformViewToProjection(norm.xy);
  
 	o.pos.xy += offset * o.pos.z * _Outline;
-	o.color = _OutlineColor;
+	float colAlpha = 1 * (1 - (distance(_WorldSpaceCameraPos, mul(unity_ObjectToWorld, v.vertex))) / _Distance);
+	o.color = (_OutlineColor.xyz, colAlpha);
 	return o;
 }
 ENDCG
