@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 72b7a100d762e30439f38a263be97a3a
-timeCreated: 1480465599
+guid: a9ad5211d228a0743a1f65a4073a0347
+timeCreated: 1480465507
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,8 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pillar
+    4300000: pillar3
+    4300002: pillar2
   materials:
     importMaterials: 1
     materialName: 0

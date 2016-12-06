@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000014011014454}
+  m_RootGameObject: {fileID: 1000011976585426}
   m_IsPrefabParent: 1
---- !u!1 &1000014011014454
+--- !u!1 &1000011976585426
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000011783735792}
-  - 108: {fileID: 108000013371389664}
+  - 4: {fileID: 4000011395857144}
+  - 108: {fileID: 108000014237620182}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -27,30 +27,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000011783735792
+--- !u!4 &4000011395857144
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014011014454}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 506.6, y: 107.3, z: 61.9}
+  m_GameObject: {fileID: 1000011976585426}
+  m_LocalRotation: {x: 0.36721897, y: -0.47403267, z: 0.1494509, w: 0.7861983}
+  m_LocalPosition: {x: 612, y: 224, z: 111.74567}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 45.977, y: -66.362, z: -9.129001}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!108 &108000013371389664
+--- !u!108 &108000014237620182
 Light:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014011014454}
+  m_GameObject: {fileID: 1000011976585426}
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 1
-  m_Color: {r: 1, g: 0.86979914, b: 0.5147059, a: 1}
-  m_Intensity: 0.77
+  m_Color: {r: 1, g: 0.92332655, b: 0.60294116, a: 1}
+  m_Intensity: 0.49
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -71,6 +71,6 @@ Light:
     m_Bits: 4294967295
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1.78
+  m_BounceIntensity: 0.82
   m_ShadowRadius: 0
   m_ShadowAngle: 0

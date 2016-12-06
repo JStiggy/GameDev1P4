@@ -40,10 +40,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010569112898}
-  m_LocalRotation: {x: -0, y: -0.7840673, z: -0, w: 0.620676}
-  m_LocalPosition: {x: 147.52138, y: 2.3879461, z: 279.75632}
+  m_LocalRotation: {x: 0.0690509, y: -0.7645878, z: -0.044197686, w: -0.639284}
+  m_LocalPosition: {x: 147.52138, y: 6.87, z: 279.75632}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: -102.97101, z: 0}
+  m_LocalEulerAnglesHint: {x: -8.913, y: -259.837, z: -2.765}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -219,7 +219,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  saturation: 1.8
+  saturation: 1.88
   selectiveCc: 0
   selectiveFromColor: {r: 1, g: 1, b: 1, a: 1}
   selectiveToColor: {r: 1, g: 1, b: 1, a: 1}
@@ -242,9 +242,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4975a6e437fc3b149a8cd508ce5bdd69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshold: 0.77
-  intensity: 0.75
-  blurSize: 1
+  threshold: 0
+  intensity: 0.16
+  blurSize: 1.05
   blurIterations: 1
   blurType: 0
   fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
@@ -289,10 +289,10 @@ MonoBehaviour:
   grainIntensityMin: 0
   grainIntensityMax: 0.44
   grainSize: 0.9
-  scratchIntensityMin: 0.13
-  scratchIntensityMax: 0.5
-  scratchFPS: 10.7
-  scratchJitter: 0.056
+  scratchIntensityMin: 0
+  scratchIntensityMax: 0.17
+  scratchFPS: 2.9
+  scratchJitter: 0.039
   grainTexture: {fileID: 2800000, guid: ffa9c02760c2b4e8eb9814ec06c4b05b, type: 3}
   scratchTexture: {fileID: 2800000, guid: 6205c27cc031f4e66b8ea90d1bfaa158, type: 3}
   shaderRGB: {fileID: 4800000, guid: 5d7f4c401ae8946bcb0d6ff68a9e7466, type: 3}
