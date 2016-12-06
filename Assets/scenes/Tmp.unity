@@ -231,6 +231,8 @@ MonoBehaviour:
     knockDownForce: 5
   physSettings:
     downAccel: 0.75
+  miningNoise: {fileID: 0}
+  movementNoise: {fileID: 0}
   interactionHeight: 3
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
   fatigue: 0
@@ -2461,7 +2463,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010729306520, guid: c62704da6690fa142a7c280911220b32, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.569579
+      value: 5.51
       objectReference: {fileID: 0}
     - target: {fileID: 4000010729306520, guid: c62704da6690fa142a7c280911220b32, type: 2}
       propertyPath: m_LocalPosition.z

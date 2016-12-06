@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     public MoveSettings moveSettings = new MoveSettings();
     public PhysSettings physSettings = new PhysSettings();
     private Animator animator;
+    public AudioSource miningNoise;
+    public AudioSource movementNoise;
 
     public float interactionHeight = 3.0f;
 
@@ -42,6 +44,22 @@ public class PlayerController : MonoBehaviour
         rb = this.GetComponent<Rigidbody>();
         targetRotation = this.transform.rotation;
         animator = GetComponent<Animator>();
+        StartCoroutine("MiningNoise");
+    }
+
+    IEnumerator MiningNoise()
+    {
+        int count = 1;
+        while(true)
+        {
+            if((count % 4 == 0 || count % 9 == 0) && !miningNoise.isPlaying)
+            {
+                miningNoise.volume = Random.Range(0f, 1f);
+                miningNoise.Play();
+            }
+            count++;
+            yield return new WaitForSeconds(1);
+        }
     }
 
     // Update is called once per frame
@@ -52,7 +70,15 @@ public class PlayerController : MonoBehaviour
         //    knockDown();
         //}
 
-        animator.SetFloat("Speed", movementVector.z + Mathf.Abs(Input.GetAxisRaw("Horizontal")));
+        animator.SetFloat("Speed", (movementVector.z + Mathf.Abs(Input.GetAxisRaw("Horizontal"))) * inEvent);
+        if(movementVector.z + Mathf.Abs(Input.GetAxisRaw("Horizontal")) * inEvent > .5f && !movementNoise.isPlaying)
+        {
+            movementNoise.Play();
+        }
+        else if((movementVector.z + Mathf.Abs(Input.GetAxisRaw("Horizontal"))) * inEvent < .5f)
+        {
+            movementNoise.Stop();
+        }
         animator.SetFloat("Resistance", resistance);
         if (Input.GetButtonDown("Submit"))
         {
@@ -75,10 +101,22 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Mining(GameObject node)
     {
+        bool noisePlayed = false;
         float animTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1;
         //float rotVel = Vector3.Angle((node.transform.position - this.transform.position), this.transform.forward) + targetRotation.eulerAngles.y;
         while (!(animTime > .80f || animTime < .10f) || !animator.GetCurrentAnimatorStateInfo(0).IsName("Mine") || !Input.GetButtonDown("Submit"))
         {
+
+            if (animTime < .40f && animTime > .38f && !noisePlayed)
+            {
+                miningNoise.volume = 1;
+                noisePlayed = true;
+                miningNoise.Play();
+            }
+            else if (animTime > .40f)
+            {
+                noisePlayed = false;
+            }
             animTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1;
             // if (Mathf.Abs(targetRotation.eulerAngles.y - rotVel) > 10)
             // {
@@ -94,6 +132,7 @@ public class PlayerController : MonoBehaviour
         }
         endEvent();
         animator.SetBool("Mining", false);
+        this.resistance = resistance * .8f;
         node.GetComponent<MineralNode>().consumeNode();
         yield return null;
     }
@@ -104,7 +143,7 @@ public class PlayerController : MonoBehaviour
         inEvent = 0;
         for (int i = 0; i < 30;++i)
         {
-            //transform.Translate(force * Time.deltaTime * moveSettings.knockDownForce);
+           //transform.Translate(force * Time.deltaTime * moveSettings.knockDownForce);
            // yield return null;
 		   rb.AddForce(force*moveSettings.knockDownForce*100);
 		   yield return null;
@@ -123,7 +162,7 @@ public class PlayerController : MonoBehaviour
     {
         targetRotation *= Quaternion.AngleAxis(moveSettings.rotationVelocity * Input.GetAxis("Horizontal") * inEvent * Time.deltaTime, Vector3.up);
         transform.rotation = targetRotation;
-        movementVector.z = Mathf.Max(Input.GetAxis("Vertical") * moveSettings.velocity * inEvent * Mathf.Clamp(1 - fatigue, .5f, 1f), 0);
+        movementVector.z = Mathf.Max(Input.GetAxis("Vertical") * moveSettings.velocity * inEvent * Mathf.Clamp(resistance, .25f, 1f), 0);
 
         if (Grounded())
         {
@@ -136,10 +175,5 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = transform.TransformDirection(movementVector);
     }
-
-    //void OnDrawGizmos()
-    //{
-    //    Gizmos.DrawSphere(transform.position + transform.forward + transform.up*interactionHeight, .3f);
-    //}
 
 }
