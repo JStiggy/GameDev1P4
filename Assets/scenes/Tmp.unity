@@ -369,9 +369,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 221836245}
   - 33: {fileID: 221836244}
-  - 65: {fileID: 221836243}
   - 23: {fileID: 221836242}
   - 114: {fileID: 221836241}
+  - 64: {fileID: 221836243}
   m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 730f1fc3755c92148a630afe49aec538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exhaustedNode: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  exhaustedNode: {fileID: 4300000, guid: 954053c3f4e60e34e9e866273d500033, type: 3}
   chunks:
   - {fileID: 1000012293961726, guid: c2d149bfd5d71194cba9f95809f2fe22, type: 2}
   - {fileID: 1000014012339560, guid: 1ec91e4702b0ee642a618f9113ba5e0c, type: 2}
@@ -411,7 +411,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ee7a06245bed1d94b998394e2acf020b, type: 2}
+  - {fileID: 2100000, guid: 49401e7551c441d4a99f36eda6429bb4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -427,8 +427,8 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &221836243
-BoxCollider:
+--- !u!64 &221836243
+MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -437,8 +437,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2.5, z: 1.75}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: a8aa88b59c72ad149aa28c2153e7cad9, type: 3}
 --- !u!33 &221836244
 MeshFilter:
   m_ObjectHideFlags: 0

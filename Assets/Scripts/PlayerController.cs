@@ -104,8 +104,10 @@ public class PlayerController : MonoBehaviour
         inEvent = 0;
         for (int i = 0; i < 30;++i)
         {
-            transform.Translate(force * Time.deltaTime * moveSettings.knockDownForce);
-            yield return null;
+            //transform.Translate(force * Time.deltaTime * moveSettings.knockDownForce);
+           // yield return null;
+		   rb.AddForce(force*moveSettings.knockDownForce*100);
+		   yield return null;
         }
         endEvent();
         yield return null;

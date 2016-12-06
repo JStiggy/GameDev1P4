@@ -92,7 +92,7 @@ public class CameraController : MonoBehaviour {
 	//when the player has been pushed
 	IEnumerator distortion(){
 		
-		Vector3 OGP = transform.position;
+		Vector3 OGP = transform.localPosition;
 		
 		GetComponent<NoiseAndScratches>().enabled = true;
 		float maxI = 0.5f;
@@ -107,14 +107,14 @@ public class CameraController : MonoBehaviour {
 		GetComponent<NoiseAndScratches>().grainIntensityMax = 0;
 		GetComponent<NoiseAndScratches>().enabled = false;
 		
-		transform.position = OGP;
+		transform.localPosition = OGP;
 		yield return null;
 	}
 	
 	void shake(){
 		transform.position = new Vector3(
-			Random.Range(transform.position.x-100, transform.position.x+100), 
-			Random.Range(transform.position.y-100, transform.position.y+100),
-			Random.Range(transform.position.z-100, transform.position.z+100));
+			Random.Range(transform.localPosition.x-100, transform.localPosition.x+100), 
+			Random.Range(transform.localPosition.y-100, transform.localPosition.y+100),
+			Random.Range(transform.localPosition.z-100, transform.localPosition.z+100));
 	}
 }

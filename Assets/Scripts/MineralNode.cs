@@ -21,8 +21,12 @@ public class MineralNode : MonoBehaviour {
 	
 	void spawnChunks(){
 		for(int i=0;i<numChunks;i++){
-			Instantiate(chunks[i], new Vector3(transform.position.x,
-			transform.position.y, transform.position.z),Quaternion.identity);
+			//spawn a random number of chunks
+			int numSpawn = Random.Range(0,3);
+			for(int j=0;j<numSpawn;j++){
+				Instantiate(chunks[i], new Vector3(transform.position.x,
+				transform.position.y, transform.position.z),Quaternion.identity);
+			}
 		}
 	}
 
