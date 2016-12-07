@@ -4,4 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/scenes/Actual/Tmp2.unity
+  - enabled: 1
+    path: Assets/scenes/Actual/TestingScene.unity
+  - enabled: 1
+    path: Assets/scenes/Actual/tmp_flashback.unity
+  - enabled: 1
+    path: Assets/scenes/Actual/TestingScene3.unity

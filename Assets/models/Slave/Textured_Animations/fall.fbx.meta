@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: beb139b35dc59ee42b6455d8eb665edb
+timeCreated: 1481077204
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: PC_rigging_AttemptAgain:head
+    100004: PC_rigging_AttemptAgain:head_neck
+    100006: PC_rigging_AttemptAgain:Hips
+    100008: PC_rigging_AttemptAgain:left_ankle
+    100010: PC_rigging_AttemptAgain:left_arm
+    100012: PC_rigging_AttemptAgain:left_arm 1
+    100014: PC_rigging_AttemptAgain:left_arm_control
+    100016: PC_rigging_AttemptAgain:left_ball
+    100018: PC_rigging_AttemptAgain:left_elbow
+    100020: PC_rigging_AttemptAgain:left_fingers
+    100022: PC_rigging_AttemptAgain:left_fingers_control
+    100024: PC_rigging_AttemptAgain:left_foot_ball
+    100026: PC_rigging_AttemptAgain:left_foot_curl
+    100028: PC_rigging_AttemptAgain:left_foot_mid
+    100030: PC_rigging_AttemptAgain:left_footl
+    100032: PC_rigging_AttemptAgain:left_hand
+    100034: PC_rigging_AttemptAgain:left_hand_control
+    100036: PC_rigging_AttemptAgain:left_knee
+    100038: PC_rigging_AttemptAgain:left_leg
+    100040: PC_rigging_AttemptAgain:left_leg 1
+    100042: PC_rigging_AttemptAgain:left_leg_control
+    100044: PC_rigging_AttemptAgain:left_palm
+    100046: PC_rigging_AttemptAgain:left_palm_control
+    100048: PC_rigging_AttemptAgain:left_toe
+    100050: PC_rigging_AttemptAgain:left_wrist
+    100052: PC_rigging_AttemptAgain:lower_body
+    100054: PC_rigging_AttemptAgain:neck
+    100056: PC_rigging_AttemptAgain:pc2_0040:pCube7
+    100058: PC_rigging_AttemptAgain:pc_skeleton
+    100060: PC_rigging_AttemptAgain:pc_skeleton_controlGroup
+    100062: PC_rigging_AttemptAgain:right_arm
+    100064: PC_rigging_AttemptAgain:right_arm 1
+    100066: PC_rigging_AttemptAgain:right_arm_control
+    100068: PC_rigging_AttemptAgain:right_ball
+    100070: PC_rigging_AttemptAgain:right_elbow
+    100072: PC_rigging_AttemptAgain:right_finger_control
+    100074: PC_rigging_AttemptAgain:right_fingers
+    100076: PC_rigging_AttemptAgain:right_fingertips
+    100078: PC_rigging_AttemptAgain:right_foot
+    100080: PC_rigging_AttemptAgain:right_foot_ball
+    100082: PC_rigging_AttemptAgain:right_foot_curl
+    100084: PC_rigging_AttemptAgain:right_foot_toe
+    100086: PC_rigging_AttemptAgain:Right_Hand_control
+    100088: PC_rigging_AttemptAgain:right_heel
+    100090: PC_rigging_AttemptAgain:right_knee
+    100092: PC_rigging_AttemptAgain:right_leg
+    100094: PC_rigging_AttemptAgain:right_leg 1
+    100096: PC_rigging_AttemptAgain:right_leg_control
+    100098: PC_rigging_AttemptAgain:right_palm
+    100100: PC_rigging_AttemptAgain:right_palm_control
+    100102: PC_rigging_AttemptAgain:right_toe
+    100104: PC_rigging_AttemptAgain:right_wrist
+    100106: PC_rigging_AttemptAgain:upper_body
+    400000: //RootNode
+    400002: PC_rigging_AttemptAgain:head
+    400004: PC_rigging_AttemptAgain:head_neck
+    400006: PC_rigging_AttemptAgain:Hips
+    400008: PC_rigging_AttemptAgain:left_ankle
+    400010: PC_rigging_AttemptAgain:left_arm
+    400012: PC_rigging_AttemptAgain:left_arm 1
+    400014: PC_rigging_AttemptAgain:left_arm_control
+    400016: PC_rigging_AttemptAgain:left_ball
+    400018: PC_rigging_AttemptAgain:left_elbow
+    400020: PC_rigging_AttemptAgain:left_fingers
+    400022: PC_rigging_AttemptAgain:left_fingers_control
+    400024: PC_rigging_AttemptAgain:left_foot_ball
+    400026: PC_rigging_AttemptAgain:left_foot_curl
+    400028: PC_rigging_AttemptAgain:left_foot_mid
+    400030: PC_rigging_AttemptAgain:left_footl
+    400032: PC_rigging_AttemptAgain:left_hand
+    400034: PC_rigging_AttemptAgain:left_hand_control
+    400036: PC_rigging_AttemptAgain:left_knee
+    400038: PC_rigging_AttemptAgain:left_leg
+    400040: PC_rigging_AttemptAgain:left_leg 1
+    400042: PC_rigging_AttemptAgain:left_leg_control
+    400044: PC_rigging_AttemptAgain:left_palm
+    400046: PC_rigging_AttemptAgain:left_palm_control
+    400048: PC_rigging_AttemptAgain:left_toe
+    400050: PC_rigging_AttemptAgain:left_wrist
+    400052: PC_rigging_AttemptAgain:lower_body
+    400054: PC_rigging_AttemptAgain:neck
+    400056: PC_rigging_AttemptAgain:pc2_0040:pCube7
+    400058: PC_rigging_AttemptAgain:pc_skeleton
+    400060: PC_rigging_AttemptAgain:pc_skeleton_controlGroup
+    400062: PC_rigging_AttemptAgain:right_arm
+    400064: PC_rigging_AttemptAgain:right_arm 1
+    400066: PC_rigging_AttemptAgain:right_arm_control
+    400068: PC_rigging_AttemptAgain:right_ball
+    400070: PC_rigging_AttemptAgain:right_elbow
+    400072: PC_rigging_AttemptAgain:right_finger_control
+    400074: PC_rigging_AttemptAgain:right_fingers
+    400076: PC_rigging_AttemptAgain:right_fingertips
+    400078: PC_rigging_AttemptAgain:right_foot
+    400080: PC_rigging_AttemptAgain:right_foot_ball
+    400082: PC_rigging_AttemptAgain:right_foot_curl
+    400084: PC_rigging_AttemptAgain:right_foot_toe
+    400086: PC_rigging_AttemptAgain:Right_Hand_control
+    400088: PC_rigging_AttemptAgain:right_heel
+    400090: PC_rigging_AttemptAgain:right_knee
+    400092: PC_rigging_AttemptAgain:right_leg
+    400094: PC_rigging_AttemptAgain:right_leg 1
+    400096: PC_rigging_AttemptAgain:right_leg_control
+    400098: PC_rigging_AttemptAgain:right_palm
+    400100: PC_rigging_AttemptAgain:right_palm_control
+    400102: PC_rigging_AttemptAgain:right_toe
+    400104: PC_rigging_AttemptAgain:right_wrist
+    400106: PC_rigging_AttemptAgain:upper_body
+    4300000: PC_rigging_AttemptAgain:pc2_0040:pCube7
+    7400000: fall
+    9500000: //RootNode
+    13700000: PC_rigging_AttemptAgain:pc2_0040:pCube7
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
