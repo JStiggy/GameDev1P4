@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public AudioSource miningNoise;
     public AudioSource movementNoise;
+	public sunCount global;
 
     public float interactionHeight = 3.0f;
 
@@ -82,7 +83,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Resistance", resistance);
         if (Input.GetButtonDown("Submit"))
         {
-            Collider[] col = Physics.OverlapSphere(transform.position + transform.forward + transform.up * interactionHeight, .3f, 1 << 9);
+            Collider[] col = Physics.OverlapSphere(transform.position + transform.forward + transform.up * interactionHeight, .7f, 1 << 9);
             if (col.Length > 0)
             {
                 inEvent = 0;
@@ -133,6 +134,8 @@ public class PlayerController : MonoBehaviour
         endEvent();
         animator.SetBool("Mining", false);
         this.resistance = resistance * .8f;
+		//add intensity boost
+		global.timer+=5;
         node.GetComponent<MineralNode>().consumeNode();
         yield return null;
     }
