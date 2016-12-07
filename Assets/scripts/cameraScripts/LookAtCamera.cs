@@ -4,8 +4,6 @@ using System.Collections;
 public class LookAtCamera : MonoBehaviour {
 	
 	public GameObject target;
-	public float speed = 0.3f;
-	private float timer=0;
 	
 	// Use this for initialization
 	void Start () {
@@ -14,16 +12,11 @@ public class LookAtCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		timer+=Time.deltaTime;
+	
 	}
 	
 	void LateUpdate(){
-		if(timer>4){
-			Quaternion old = transform.rotation;
-			transform.LookAt(target.transform);
-			Quaternion newL = transform.rotation;
-			transform.rotation = Quaternion.Lerp(old, newL, speed*Time.deltaTime);
-		}
+		transform.LookAt(target.transform);
 	}
 	
 }
