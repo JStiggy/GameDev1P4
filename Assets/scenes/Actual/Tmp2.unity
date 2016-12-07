@@ -704,6 +704,7 @@ GameObject:
   - 4: {fileID: 304907335}
   - 65: {fileID: 304907337}
   - 114: {fileID: 304907338}
+  - 114: {fileID: 304907336}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -724,6 +725,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1810996085}
   m_RootOrder: 0
+--- !u!114 &304907336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 304907334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb22977a4d63b1479c0b11d2a708f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeCamera: {fileID: 2106175782}
+  nextCamera: {fileID: 619922849}
+  trigger: {fileID: 275002000}
 --- !u!65 &304907337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -747,8 +762,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e681133aadb2d342b70c661def23029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeCamera: {fileID: 2106175782}
-  nextCamera: {fileID: 619922849}
   trigger: {fileID: 275002000}
   sun1: {fileID: 368117778}
   sun2: {fileID: 75892153}

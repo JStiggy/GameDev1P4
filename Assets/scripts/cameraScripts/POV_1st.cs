@@ -3,8 +3,8 @@ using System.Collections;
 
 public class POV_1st : MonoBehaviour {
 
-	public Camera activeCamera;
-    public Camera nextCamera;
+	//public Camera activeCamera;
+   // public Camera nextCamera;
 
     public Collider trigger;
 	
