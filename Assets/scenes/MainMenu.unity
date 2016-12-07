@@ -253,6 +253,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &413180322 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010448457358, guid: 96677b18bbf83ad45bc1e6feb795b434,
+    type: 2}
+  m_PrefabInternal: {fileID: 1037937540}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &426581547
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,20 +290,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartGame:
-    CButton: {fileID: 114000010448457358, guid: 96677b18bbf83ad45bc1e6feb795b434,
-      type: 2}
+    CButton: {fileID: 413180322}
     Default: {fileID: 21300000, guid: de78d664d3605b14dbc5e6a6b500b1b9, type: 3}
     Selected: {fileID: 21300000, guid: 6f991ff3636e7264ead80256646eb538, type: 3}
     Action: 
   About:
-    CButton: {fileID: 114000012946759900, guid: a2c60b8b63547f147a5222e66488637c,
-      type: 2}
+    CButton: {fileID: 2122938629}
     Default: {fileID: 21300000, guid: 8e62300451d624940ab78e3074a66098, type: 3}
     Selected: {fileID: 21300000, guid: d1def485ec598954c8011fdc87e4c008, type: 3}
     Action: 
   Exit:
-    CButton: {fileID: 114000011114445946, guid: e24d918182a0f364d9cd1434ee678466,
-      type: 2}
+    CButton: {fileID: 1474703652}
     Default: {fileID: 21300000, guid: 8590950d9bb0af14aa821675a42f55f9, type: 3}
     Selected: {fileID: 21300000, guid: 3a5e3d9b0a2e5a449ad21eec6d4344ac, type: 3}
     Action: 
@@ -488,6 +491,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224000011755786426, guid: e24d918182a0f364d9cd1434ee678466,
     type: 2}
   m_PrefabInternal: {fileID: 262178799}
+--- !u!114 &1474703652 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011114445946, guid: e24d918182a0f364d9cd1434ee678466,
+    type: 2}
+  m_PrefabInternal: {fileID: 262178799}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1575707514
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,3 +751,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &2122938629 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000012946759900, guid: a2c60b8b63547f147a5222e66488637c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1889909183}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
