@@ -32,7 +32,10 @@ public class FadeOutCamera : MonoBehaviour {
 
     void OnGUI()
     {
-
+        if(this.GetComponent<Camera>() != Camera.current)
+        {
+            return;
+        }
         alpha += fadeDir * fadeSpeed * Time.deltaTime;
         alpha = Mathf.Clamp01(alpha);
 

@@ -2931,6 +2931,25 @@ Prefab:
     - {fileID: 114000012501425942, guid: d5a6122d4702b0743964ac9ab27220d6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d5a6122d4702b0743964ac9ab27220d6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1564863527 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010569112898, guid: d5a6122d4702b0743964ac9ab27220d6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1564863526}
+--- !u!114 &1564863528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1564863527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eb9335f0b6066249b0888ed6ddfbd2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: TestingScene
+  fadeTexture: {fileID: 2800000, guid: 9a8b7d47fcae37749b5fe4fd38967c43, type: 3}
+  fadeDir: 1
 --- !u!1 &1587797090
 GameObject:
   m_ObjectHideFlags: 0
