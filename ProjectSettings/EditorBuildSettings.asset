@@ -6,6 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/scenes/Actual/TitleScreen_scene.unity
+  - enabled: 1
     path: Assets/scenes/Actual/Tmp2.unity
   - enabled: 1
     path: Assets/scenes/Actual/TestingScene.unity
@@ -13,3 +15,7 @@ EditorBuildSettings:
     path: Assets/scenes/Actual/tmp_flashback.unity
   - enabled: 1
     path: Assets/scenes/Actual/TestingScene3.unity
+  - enabled: 1
+    path: Assets/scenes/Actual/loopCave.unity
+  - enabled: 1
+    path: Assets/scenes/Actual/flashback2.unity
