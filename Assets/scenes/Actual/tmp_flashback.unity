@@ -5911,7 +5911,7 @@ GameObject:
   - 114: {fileID: 789633482}
   - 114: {fileID: 789633492}
   m_Layer: 0
-  m_Name: Exterior Camera (1)
+  m_Name: Second Scene
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6177,7 +6177,7 @@ Camera:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 789633481}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
@@ -6230,8 +6230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb9335f0b6066249b0888ed6ddfbd2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeCamera: {fileID: 0}
-  trigger: {fileID: 0}
+  NextScene: 
   fadeTexture: {fileID: 2800000, guid: 9a8b7d47fcae37749b5fe4fd38967c43, type: 3}
   fadeDir: -1
 --- !u!1001 &797763753
@@ -15231,12 +15230,12 @@ GameObject:
   - 114: {fileID: 2113221255}
   - 114: {fileID: 2113221256}
   m_Layer: 0
-  m_Name: Exterior Camera
+  m_Name: First Scene
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2113221247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15532,8 +15531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb9335f0b6066249b0888ed6ddfbd2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeCamera: {fileID: 0}
-  trigger: {fileID: 0}
+  NextScene: 
   fadeTexture: {fileID: 2800000, guid: 9a8b7d47fcae37749b5fe4fd38967c43, type: 3}
   fadeDir: -1
 --- !u!1001 &2116013479
