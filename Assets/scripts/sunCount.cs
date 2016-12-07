@@ -3,6 +3,7 @@ using System.Collections;
 
 public class sunCount : MonoBehaviour {
 	public float timer = 25f;
+	public FadeOutCamera camera;
 	
 	private float maxTime;
 	private float maxI;
@@ -25,6 +26,9 @@ public class sunCount : MonoBehaviour {
 			percentage = timer/maxTime;
 			
 			light.intensity = maxI*percentage;
+		}
+		else{
+			camera.fadeDir = 1;
 		}
 	}
 }
