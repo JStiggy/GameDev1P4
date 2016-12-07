@@ -10,7 +10,6 @@ public class OreScatter : MonoBehaviour {
 			Random.Range( 0.1f, 1.0f ),
 			Random.Range( 0.1f, 1.0f )
 		);
-		print(direction*thrust);
 		GetComponent<Rigidbody>().AddForce(direction*thrust);
 	}
 }
