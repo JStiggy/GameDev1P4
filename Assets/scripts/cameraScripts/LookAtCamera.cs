@@ -6,7 +6,9 @@ public class LookAtCamera : MonoBehaviour
 
     public GameObject target;
     public float speed = 0.3f;
+	public float time = 4;
     private float timer = 0;
+	
 
     // Use this for initialization
     void Start()
@@ -22,7 +24,7 @@ public class LookAtCamera : MonoBehaviour
 
     void LateUpdate()
     {
-        if (timer > 4)
+        if (timer > time)
         {
             Quaternion old = transform.rotation;
             transform.LookAt(target.transform);
