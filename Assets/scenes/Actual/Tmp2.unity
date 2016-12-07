@@ -254,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   location:
   - {fileID: 1704867420}
-  moveSpeed: 3
+  moveSpeed: 2.6
   loop: 0
 --- !u!23 &200236236
 MeshRenderer:
@@ -295,7 +295,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &200236238
 MeshFilter:
@@ -311,7 +311,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 200236233}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 252.04001, y: 8.32, z: 271.6}
+  m_LocalPosition: {x: 252.04001, y: 8.32, z: 280.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -501,7 +501,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &275002001
 MeshFilter:
@@ -2704,7 +2704,7 @@ Prefab:
         type: 2}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: cb99e61335693fc4cab65db0a63c49a7, type: 2}
+      objectReference: {fileID: 9100000, guid: 3cfce6802b1722e428bbfe7289ce9c4c, type: 2}
     m_RemovedComponents:
     - {fileID: 114000012622862310, guid: c62704da6690fa142a7c280911220b32, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c62704da6690fa142a7c280911220b32, type: 2}
@@ -3984,7 +3984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   location:
   - {fileID: 1704867420}
-  moveSpeed: 3
+  moveSpeed: 2.7
   loop: 0
 --- !u!23 &1934881224
 MeshRenderer:
@@ -4025,7 +4025,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1934881226
 MeshFilter:
@@ -4041,7 +4041,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1934881221}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 252.04001, y: 7.66, z: 263.24}
+  m_LocalPosition: {x: 252.04001, y: 7.66, z: 270.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -4284,7 +4284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   location:
   - {fileID: 1704867420}
-  moveSpeed: 3
+  moveSpeed: 2.5
   loop: 0
 --- !u!23 &2114978428
 MeshRenderer:
@@ -4325,7 +4325,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2114978430
 MeshFilter:
@@ -4341,7 +4341,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2114978425}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 252.04001, y: 10.08, z: 280.2}
+  m_LocalPosition: {x: 252.04001, y: 10.08, z: 289.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -4469,7 +4469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   location:
   - {fileID: 1704867420}
-  moveSpeed: 3
+  moveSpeed: 2.8
   loop: 0
 --- !u!23 &2133610974
 MeshRenderer:
@@ -4510,7 +4510,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2133610976
 MeshFilter:
@@ -4526,7 +4526,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2133610971}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 252.04001, y: 7.22, z: 255.96}
+  m_LocalPosition: {x: 252.04001, y: 7.22, z: 260.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
