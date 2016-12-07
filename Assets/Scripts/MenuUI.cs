@@ -22,8 +22,10 @@ public class CustomButton {
 public class MenuUI : MonoBehaviour {
 	
 	public CustomButton StartGame;
-	public CustomButton About;
-	public CustomButton Exit;
+    public GameObject cam;
+
+	//public CustomButton About;
+	//public CustomButton Exit;
 
 	IList<CustomButton> button_list;
 	int button_index;
@@ -39,10 +41,10 @@ public class MenuUI : MonoBehaviour {
 		button_list = new List<CustomButton>();
 		StartGame.Action = "START";
 		button_list.Add (StartGame);
-		About.Action = "ABOUT";
-		button_list.Add (About);
-		Exit.Action = "EXIT";
-		button_list.Add (Exit);
+		//About.Action = "ABOUT";
+		//button_list.Add (About);
+		//Exit.Action = "EXIT";
+		//button_list.Add (Exit);
 	}
 
 	void Update() {
@@ -76,16 +78,17 @@ public class MenuUI : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Space)) {
 			//perform button action
 			if(button_list[button_index].Action == "START") {
-				//load scene
-				Debug.Log("Start pressed!");
+                //load scene
+                //Debug.Log("Start pressed!");
+                cam.GetComponent<FadeOutCamera>().enabled = true;
 			}
 			if(button_list[button_index].Action == "ABOUT") {
 
-				Debug.Log("About pressed!");
+				//Debug.Log("About pressed!");
 			}
 			if(button_list[button_index].Action == "EXIT") {
 
-				Debug.Log("Exit pressed!");
+				//Debug.Log("Exit pressed!");
 			}
 
 		}
