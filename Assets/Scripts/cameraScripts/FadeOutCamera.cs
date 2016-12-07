@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class FadeOutCamera : MonoBehaviour {
 
     // Use this for initialization
-    public Camera activeCamera;
+    // public Camera activeCamera;
 
-    public Collider trigger;
+    // public Collider trigger;
 
+    public string NextScene;
+       
     public Texture2D fadeTexture;
     float fadeSpeed = 0.2f;
     int drawDepth = -1000;
@@ -18,6 +20,14 @@ public class FadeOutCamera : MonoBehaviour {
     void Start()
     {
         alpha = 1 - fadeDir;
+    }
+
+    void Update()
+    {
+        if(alpha >= 1 && fadeDir == 1)
+        {
+            SceneManager.LoadScene(NextScene);
+        }
     }
 
     void OnGUI()

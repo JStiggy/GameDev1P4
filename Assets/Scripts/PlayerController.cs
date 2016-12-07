@@ -148,6 +148,7 @@ public class PlayerController : MonoBehaviour
 		   rb.AddForce(force*moveSettings.knockDownForce*100);
 		   yield return null;
         }
+        yield return new WaitForSeconds(1);
         endEvent();
         yield return null;
     }
